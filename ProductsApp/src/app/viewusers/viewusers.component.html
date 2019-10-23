@@ -1,0 +1,43 @@
+<div id="body">
+
+    <div class="card">
+        <div class="card-header" style="text-align: center">
+         Users <a  style="float:left;"id="addcandidate_button"  routerLink="/admindashboard"  role="button">Back</a>
+          <input style="float: right;" (click)="deleteusers()"type="button" value="delete all" name="deleteall">
+        </div>
+        <div class="class-body">
+          <div class="table-responsive">
+            <table class="table" *ngIf="users && users.length">
+              <thead>
+                <tr>
+                  <th> Full Name </th>
+                  <th> Email </th>
+                  <th> Phone </th>
+                  <th> Votedflag</th>
+                  <th> Requesting flag </th>
+                  <th></th>
+                  <th> Adhar Number </th>
+                </tr>
+              </thead>
+              <tbody   *ngFor="let user of users">
+                <tr>
+                 
+                  <td>{{user.username}}</td>
+                  <td>{{user.email}}</td> 
+                  <td>{{user.mobilenumber}}</td>
+                  <td>{{user.votedflag}}</td>
+                  <td >{{user.requestflag}}</td>
+                  <td><button class="btn btn-danger"  (click)="onUpdateuser(user)">Verify</button>
+                  &nbsp;
+                  <td>{{user.adhar}}</td>
+                  <td><button class="btn btn-danger" (click)="onDeleteuser(user._id)">Delete</button>
+                  &nbsp;
+                  
+                </tr>
+      
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+</div>

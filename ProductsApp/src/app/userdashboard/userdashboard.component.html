@@ -1,0 +1,69 @@
+<div id="body" >
+
+ 
+  <br>
+  
+  
+ <div class="container" >
+   <div class="row">
+
+ <div class="flip-card"  *ngFor="let candidate of candidates"> <br>
+  <button class="btn btn-info" style="text-align: center" (click)="submitMethod2(candidate)">Vote</button>
+
+   <div class="flip-card-inner">
+     <div class="flip-card-front">
+       
+       <img src={{candidate.imageUrl}} alt="Avatar" style="width:180px;height:210px; border-radius:10px;">
+ 
+     </div>
+     <div class="flip-card-back">
+      
+         <br> <h6>   <p>{{candidate.candidatename}}</p></h6>
+         <i class="fas fa-calendar-alt">&nbsp; {{ candidate.electionDate }}</i>
+      <i class="fas fa-flag"> &nbsp; {{ candidate.electionname }}</i> <br> 
+      <br>
+      <i class=" fa fa-spinner fa-spin"> </i>
+      
+       
+       
+         <!-- <br><p style="margin:3px;">{{candidate.description}}</p>  -->
+      
+     </div>
+   </div>
+ </div>
+ </div>
+ &nbsp;&nbsp;&nbsp;
+ </div>
+   
+  
+  
+ 
+
+  <!-- <div class="container">
+    <br>
+    <u style="color: #E01933"><h4>Vote Now</h4></u>
+
+    <form >
+        <div style="margin-left: 30px;"  class="form-group">
+          <br>
+        
+         
+     
+            <div *ngFor="let product of products" style="color:white;">
+              
+              <label   style="color:white;"></label>&nbsp;
+              <input type="radio"   name="movieName"  class="btn btn-primary" value="{{product.productName}}" >{{candidate.candidatename}}
+              <button class="btn btn-danger"  (click)="submitMethod2(product)">Vote</button>
+                &nbsp;
+              </div>
+              
+            
+   
+         
+        </div>
+        </form>
+        
+      </div>
+   -->
+</div>
+

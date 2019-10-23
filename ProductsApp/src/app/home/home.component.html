@@ -1,0 +1,42 @@
+<div id="body" >
+
+ 
+ <br>
+ 
+ <br><br><br><br>
+<div class="container" >
+  <div class="row">
+<div class="flip-card"  *ngFor="let candidate of candidates"> <br>
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      
+      <img src={{candidate.imageUrl}} alt="Avatar" style="width:180px;height:210px; border-radius:10px;">
+
+    </div>
+    <div class="flip-card-back">
+     
+        <br> <h6>   <p>{{candidate.candidatename}}</p></h6>
+        <i class="fas fa-calendar-alt">&nbsp; {{ candidate.electionDate }}</i>
+     <i class="fas fa-flag"> &nbsp; {{ candidate.electionname }}</i> <br> 
+     <div >
+     <div *ngIf="candidate.resultflag==='true'">
+      
+     <br>Votecount&nbsp;:&nbsp;{{ candidate.votecount }}&nbsp;
+     <i class=" fa fa-spinner fa-spin"> </i>
+    </div>
+     </div>
+      
+      
+        <!-- <br><p style="margin:3px;">{{candidate.description}}</p>  -->
+     
+    </div>
+  </div>
+</div>
+</div>
+&nbsp;&nbsp;&nbsp;
+</div>
+  
+ 
+ 
+
+</div>

@@ -1,0 +1,47 @@
+<div style="background: url('../../../adminloginbg.jpg');">
+  <div id="mele" style="color: aliceblue;text-align: center">
+    Add Candidate<a  style="float:left; margin-left: 10px;"id="addmovies_button"  routerLink="/admindashboard"  role="button">Back</a>
+    
+  </div>
+  
+  <form #candidateForm="ngForm" (ngSubmit)="submitMethod(candidateForm)">
+    <div class="form-group">
+      <br>
+      <label>Candidate Name</label> &nbsp;
+      <input  style="width:400px;" type="text" class="form-control"  placeholder="candidatename"name="candidatename" #name="ngModel" [(ngModel)]="candidateItem.candidatename" >&nbsp;&nbsp;&nbsp;
+      <br>
+    
+  
+   <div>
+      <label>Election Name</label> &nbsp;
+      <input type="text"  style="width:400px;"class="form-control"  placeholder="electionname"name="electionname" #name="ngModel" [(ngModel)]="candidateItem.electionname" >
+        
+        
+      
+    </div>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <br>
+  
+      <div>
+      <label>election Date</label>&nbsp;
+      <input  style="width:400px;" type="text" placeholder="dd/mm/yyyy"name="electionDate" class="form-control" #name="ngModel"  [(ngModel)]="candidateItem.electionDate"  >
+    </div>
+  
+      <br>
+  
+      <label>Description</label>
+      <textarea style="width:400px; " placeholder="About Candidate"name="description" class="form-control" #name="ngModel"  [(ngModel)]="candidateItem.description" ></textarea>
+      <br>
+     <label>Image</label>
+      <input style="width:400px; " type="text" placeholder="../../../imagename"name="imageUrl" class="form-control" #name="ngModel"  [(ngModel)]="candidateItem.imageUrl" >
+      <br>
+      <label>votecount</label>
+      <input style="width:400px; " type="text" value="0" placeholder="votecount"name="votecount" class="form-control" #name="ngModel"  [(ngModel)]="candidateItem.votecount" >
+      <br> 
+      <input style="width:400px; " type="hidden" value="0" placeholder="votecount"name="resultflag" class="form-control" #name="ngModel"  [(ngModel)]="candidateItem.resultflag" >
+      <button type="submit" id="add_button" class="btn btn-primary">Add</button>
+    </div>
+    <br><br>
+    </form>
+  
+  </div>

@@ -1,0 +1,45 @@
+<div class="card">
+  <div class="card-header" style="text-align: center">
+    Candidates <a  style="float:left;"id="addmovies_button"  routerLink="/admindashboard"  role="button">Back</a>
+    <input style="float: right;" (click)="updateall()"type="button" value="reveal result" name="reveal result">
+    &nbsp;
+    <input style="float: right;" (click)="clearall()"type="button" value="clear result" name="clear result">
+  </div>
+  <div class="class-body">
+    <div class="table-responsive">
+      <table class="table" *ngIf="candidates && candidates.length">
+        <thead>
+          <tr>
+            <th>
+             Image
+            </th>
+            <th>Candidate Name</th>
+            <th>Electionname</th>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Votecount</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody   *ngFor="let candidate of candidates">
+          <tr>
+            <td>
+              <img src={{candidate.imageUrl}}  width="50px" margin="50px"/>
+            
+            </td>
+            <td>{{candidate.candidatename}}</td>
+            <td>{{candidate.electionname}}</td>
+            <td>{{candidate.electionDate}}</td>
+            <td>{{candidate.description}}</td>
+            <td>{{candidate.votecount}}</td>
+            <td><button class="btn btn-danger" (click)="onDelete(candidate._id)">Delete</button>
+            &nbsp;
+            <button class="btn btn-warning" (click)="onUpdate(candidate._id)">Update</button></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
